@@ -1,0 +1,15 @@
+Q1: Identify tools that will allow you to do the following:
+    a.  Scan infrastructure as code templates
+        Tools:
+        -   Terrascan: https://github.com/cesar-rodriguez/terrascan
+
+    b.  Scan AMI’s or containers for OS vulnerabilities
+        -   Trivy: https://github.com/aquasecurity/trivy
+    
+    c.  Scan an AWS environment for cloud configuration vulnerabilities
+        -   AWStealth: https://github.com/cyberark/SkyArk/tree/master/AWStealth
+
+Q2: For each tool - identify an example compliance violation or vulnerability which it might expose.
+    1.  Terrascan : Ingress open to 0.0.0.0/0
+    2.  Trivy detects vulnerabilities in OS packages and application libraries
+    3.  AWStealth:  Unsecured privileged users - no MFA and no constrained permission condition 
