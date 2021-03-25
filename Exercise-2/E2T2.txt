@@ -1,0 +1,15 @@
+Excersice: 
+    1.  Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project. 
+    2.  Provide recommendations on how to remediate the vulnerabilities.
+
+1.  Vulnerabilities:
+    [CIS.1.12]	Ensure no root account access key exists
+    [CIS.4.3]   Ensure the default security group of every VPC restricts all traffic
+    [CIS.2.1]	Ensure CloudTrail is enabled in all regions
+
+2.  Recommendations:
+    Remove root access for AWS access keys
+    Default security group for VPC should be closed and should restricts all traffic
+    EC2 instances in your account should be managed by AWS Systems Manager
+    SSL & server-side encryption should be enabled on S3 buckets
+    EBS volumes must be encrypted
