@@ -1,0 +1,12 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+Based on a EC2's CloudFormation provisioned template, IAM Role (c3-app-InstanceRole) is assigned to both "Web Service Instance - C3" and "Attack Instance - C3". 
+There must be a separate roles with proper permissions for above instances (least privilege principle).
+
+# Poor practice 2
+Based on previsioned template, all security groups has ingress and egress rules configured for CidrIp as 0.0.0.0/0. 
+Attackers could exploit this communicate to or from any IP address leaving unwanted connections.
+
+# Poor practice 3
+Currently WebAppSG is configured on ports 5000 and 8080 which is generally used for HTTP communication. This entity must be configured over port 443 for HTTPS communication. 
